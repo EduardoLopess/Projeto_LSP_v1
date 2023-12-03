@@ -1,0 +1,143 @@
+.container {
+  width: 80%;
+  height: 80vh;
+  display: flex;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
+  margin-top: 10px;
+}
+
+.form-image {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0F4571;
+}
+
+.form-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 3rem;
+}
+
+.form-header {
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.login-button {
+  display: flex;
+  align-items: center;
+}
+
+.login-button button {
+  border: none;
+  background-color: #6c63ff;
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 30vw; /* Definir a largura inicial em vw (viewport width) */
+  max-width: 300px; /* Limitar o tamanho máximo do botão */
+  height: 3em;
+  margin-top: 50px;
+  transition: width 0.3s ease; /* Adicionar transição suave */
+}
+
+
+.login-button button:hover {
+  background-color: #6b63fff1;
+}
+
+.login-button button a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #fff;
+}
+
+.form-header h1::after {
+  content: '';
+  display: block;
+  width: 12.5rem;
+  height: 0.3rem;
+  padding-top: 2px;
+  background-color: #6c63ff;
+  margin: 0 auto;
+  margin-top: 2px;
+  position: absolute;
+  border-radius: 10px;
+}
+
+
+.input-box input[type="text"],
+.input-box input[type="password"] {
+    margin: 0.6rem 0;
+    padding: 1rem 1.5rem; /* Aumenta o padding para aumentar o tamanho do campo */
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+    font-size: 1rem; /* Aumenta o tamanho da fonte */
+}
+
+.input-box input[type="text"]:hover,
+.input-box input[type="password"]:hover {
+    background-color: #eeeeee75;
+}
+
+.input-box input[type="text"]:focus-visible,
+.input-box input[type="password"]:focus-visible {
+    outline: 1px solid #6c63ff;
+}
+
+
+.input-box input::placeholder {
+    color: #000000be;
+}
+
+
+.input-box label {
+  font-size: 20px;
+  margin-right: 10px;
+  color: #000000c0;
+}
+
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .form-image,
+  .form {
+    width: 100%;
+  }
+
+  .form-image {
+    height: 40vh;
+  }
+
+  .form {
+    padding: 2rem;
+  }
+
+  .login-button button {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .login-button button {
+    width: 60vw; /* Ajuste para telas menores usando vw */
+    max-width: 100%; 
+  }
+}

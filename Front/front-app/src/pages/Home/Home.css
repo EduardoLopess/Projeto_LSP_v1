@@ -1,0 +1,15 @@
+body {
+    background-color: rgb(231, 223, 207);
+}
+
+.conteudo {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .conteudo {
+        flex-direction: column; /* Altera para uma coluna em telas menores que 768px */
+        align-items: center; /* Centraliza os itens na coluna */
+    }
+}

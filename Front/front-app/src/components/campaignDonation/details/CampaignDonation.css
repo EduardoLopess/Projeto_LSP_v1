@@ -1,0 +1,121 @@
+/* Responsivo para CampaignDonationDetails */
+.volunteeringDetails-container {
+    box-shadow: 1px 4px 6px #0000001c;
+    width: 70em;
+    height: auto;
+    background-color: wheat;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 0 auto;
+}
+
+.volunteeringDetails-container p {
+    font-size: 1.1em;
+}
+
+.volunteeringDetails-title {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    height: 4em;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.description-volunteeringDetails h4,
+.type-volunteeringDetails h4 {
+    margin-left: 1.5em;
+    margin-bottom: 10px;
+}
+
+.description-volunteeringDetails p,
+.type-volunteeringDetails p {
+    text-indent: 1.5em;
+    text-align: justify;
+    line-height: 1.5;
+    margin-left: 1.2em;
+    margin-right: 1.2em;
+}
+
+.localization-container h4 {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.localization-container {
+    background-color: aliceblue;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 15px;
+
+}
+
+.localization-container .col {
+    margin-right: 2em;
+    margin-left: 2em;
+    flex: 1 1 40%;
+}
+
+
+
+
+.localization-container p {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.btn-retunr {
+    
+    text-align: center;
+}
+
+.btn-retunr a {
+    text-decoration: none;
+    color: black;
+  }
+
+  
+
+
+/* Adicionando regras de mídia para tornar o layout responsivo */
+@media (max-width: 768px) {
+    .volunteeringDetails-container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .volunteeringDetails-title {
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .description-volunteeringDetails h4,
+    .type-volunteeringDetails h4 {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .description-volunteeringDetails p,
+    .type-volunteeringDetails p {
+        text-indent: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .localization-container h4 {
+        margin-bottom: 10px;
+    }
+
+    .localization-container {
+        padding: 10px;
+    }
+
+    
+}

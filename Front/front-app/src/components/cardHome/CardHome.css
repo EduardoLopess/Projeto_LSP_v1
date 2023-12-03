@@ -1,0 +1,59 @@
+.card-conteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 45em;
+    height: 645px;
+    border: solid 1px black;
+    text-align: center;
+    align-items: center;
+    margin-top: 35px;
+    margin-left: 35px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.4);
+    border: none;
+    background-color: rgb(13, 129, 172);
+}
+
+.card-conteudo img {
+    max-width: 50%;
+    max-height: 50%;
+    width: auto;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.card-conteudo p {
+    padding-top: 0.3em;
+    line-height: 1.5;
+    text-align: justify;
+    text-indent: 15px;
+    margin-bottom: 1.5em;
+}
+
+.card-conteudo button {
+    width: 300px;
+    height: 2.5em;
+    border-radius: 10px;
+    border: none;
+    background-color: green;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+hr {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .card-conteudo {
+        width: 95%; /* Muda a largura para ocupar 100% da largura da tela */
+        margin: 10px; /* Adiciona um espaçamento entre os cards */
+    }
+
+    .card-conteudo button {
+        width: 20em; /* Faz o botão ocupar toda a largura do card em telas menores */
+    }
+}

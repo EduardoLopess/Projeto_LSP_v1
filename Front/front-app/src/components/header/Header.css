@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    height: auto;
+    background-color: rgb(39, 39, 160);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Ajuste conforme necessário */
+    position: relative; /* Adicionei esta propriedade */
+}
+
+.logo {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.logo img {
+    width: 70px; /* Ajuste conforme necessário */
+    height: auto;
+}
+
+.list-menu {
+    display: flex;
+    list-style: none;
+    transition: display 0.3s ease; /* Adicionei transição */
+}
+
+.item {
+    margin-right: 2.5em;
+    font-size: 1.3em;
+}
+
+.item a {
+    color: white;
+    text-decoration: none;
+}
+
+.item a:hover,
+.item.active a {
+    color: black;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.menu-icon div {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+}
+
+.close-icon {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    .list-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Ajuste conforme necessário */
+        left: 0;
+        width: 100%;
+        background-color: rgb(39, 39, 160);
+        text-align: center;
+        z-index: 1; /* Adicionei esta propriedade */
+        transition: display 0.3s ease; /* Adicionei transição */
+    }
+
+    .list-menu.active {
+        display: flex;
+    }
+
+    .item {
+        margin: 0.5em 0;
+    }
+
+    .item a {
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s ease; /* Adicionei transição */
+    }
+
+    .item a:hover,
+    .item.active a {
+        color: black;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .close-icon {
+        display: block;
+    }
+}

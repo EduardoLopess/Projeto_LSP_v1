@@ -1,0 +1,50 @@
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 80vh; /* Exemplo de tamanho máximo */
+    padding: 3em 1em; /* Adicionei um espaçamento no topo e na base */
+    margin: 0 auto; /* Para centralizar horizontalmente */
+    background-color:white;
+    margin-top: 2em;
+    border-radius: 20px;
+  }
+  
+  .about-container{
+    color: rgb(35, 123, 196);
+  }
+  .about-header h2, h3 {
+    margin-top: 0.5em; 
+  }
+  .about-header h3{
+    color: black;
+  }
+  /* Estilizando as seções */
+  .about-header,
+  .about-title-project,
+  .about-container-description {
+    margin-bottom: 1em; /* Espaçamento entre as seções */
+  }
+  
+  .about-container-description p {
+    padding-top: 1.5em; /* Espaçamento no topo de cada parágrafo */
+    margin-bottom: 1.5em; /* Espaçamento na parte inferior de cada parágrafo */
+    line-height: 1.6; /* Define a altura das linhas */
+    text-align: justify; /* Alinha o texto justificado */
+    text-indent: 2em; /* Recuo na primeira linha */
+    font-size: 1.3em;
+    width: 100%; /* Ocupa toda a largura do container */
+    word-wrap: break-word; /* Permite a quebra de palavras longas se necessário */
+    color: black;
+}
+  
+  .technology {
+    margin-top: 2em;
+  }
+  
+  .technology h3 {
+    margin-top: 0;
+  }
+  

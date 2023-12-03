@@ -1,0 +1,97 @@
+.volunteeringDetails-container {
+    box-shadow: 1px 4px 6px #0000001c;
+    width: 70em;
+    height: auto;
+    background-color: wheat;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 0 auto;
+}
+
+.volunteeringDetails-title {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    height: 4em;
+    color: white;
+    margin-bottom: 20px;
+}
+ 
+.description-volunteeringDetails h4 {
+    margin-left: 1.5em;
+    margin-bottom: 10px;
+}
+  
+.description-volunteeringDetails p {
+    text-indent: 1.5em;
+    text-align: justify;
+    line-height: 1.5;
+    margin-left: 1.2em;
+    margin-right: 1.2em;
+  }
+  
+.responsibilitiesBenefits-container h4 {
+    margin-left: 1.5em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+
+.responsibilitiesBenefits-container li{
+    list-style: none;
+    margin-left: 2.5em;
+    margin-top: 8px;
+    margin-bottom: 5px;
+  }
+
+.type-volunteeringDetails h4{
+    margin-left: 1.5em;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    
+}
+
+.type-volunteeringDetails p{
+    margin-left: 2.5em;
+    margin-top: 8px;
+    margin-bottom: 10px;
+    
+    
+    
+}
+
+.localization-container h4 {
+    width: 100%; /* Faz com que o título ocupe 100% da largura para centralizar */
+    text-align: center; /* Centraliza o texto do título */
+    margin-bottom: 10px; /* Adiciona algum espaçamento abaixo do título */
+}
+
+
+  
+.localization-container{
+    background-color: aliceblue;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+}
+  
+.localization-container p {
+    width: 50%; /* Define a largura de cada parágrafo para 50% do contêiner */
+    box-sizing: border-box; /* Garante que a largura inclua a margem e o preenchimento */
+    margin:0;
+    
+}
+  
+
+.btn-sub {
+    text-align: center;
+}
+
+.btn-sub a{
+    text-decoration: none;
+    color: black;
+}

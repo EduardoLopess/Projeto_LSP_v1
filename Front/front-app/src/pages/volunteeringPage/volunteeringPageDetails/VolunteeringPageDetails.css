@@ -1,0 +1,5 @@
+.details-container{
+    display: flex;
+    padding-top: 5em;
+    justify-content: center;
+}

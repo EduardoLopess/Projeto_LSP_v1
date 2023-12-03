@@ -1,0 +1,16 @@
+.volunteeringPage-container {
+    padding: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1em;
+    margin: 2em;
+}
+@media (max-width: 768px) {
+    .volunteeringPage-container {
+        margin: 1em;
+    }
+}
+
