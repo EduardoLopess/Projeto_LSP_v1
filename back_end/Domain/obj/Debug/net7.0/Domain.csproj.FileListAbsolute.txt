@@ -1,36 +1,11 @@
-C:\Users\Edu\Desktop\Projeto - LSP\back_end\Domain\bin\Debug\net7.0\Domain.deps.json
-C:\Users\Edu\Desktop\Projeto - LSP\back_end\Domain\bin\Debug\net7.0\Domain.dll
-C:\Users\Edu\Desktop\Projeto - LSP\back_end\Domain\bin\Debug\net7.0\Domain.pdb
-C:\Users\Edu\Desktop\Projeto - LSP\back_end\Domain\obj\Debug\net7.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Edu\Desktop\Projeto - LSP\back_end\Domain\obj\Debug\net7.0\Domain.AssemblyInfoInputs.cache
-C:\Users\Edu\Desktop\Projeto - LSP\back_end\Domain\obj\Debug\net7.0\Domain.AssemblyInfo.cs
-C:\Users\Edu\Desktop\Projeto - LSP\back_end\Domain\obj\Debug\net7.0\Domain.csproj.CoreCompileInputs.cache
-C:\Users\Edu\Desktop\Projeto - LSP\back_end\Domain\obj\Debug\net7.0\Domain.dll
-C:\Users\Edu\Desktop\Projeto - LSP\back_end\Domain\obj\Debug\net7.0\refint\Domain.dll
-C:\Users\Edu\Desktop\Projeto - LSP\back_end\Domain\obj\Debug\net7.0\Domain.pdb
-C:\Users\Edu\Desktop\Projeto - LSP\back_end\Domain\obj\Debug\net7.0\ref\Domain.dll
-C:\Users\Edu\Desktop\Projeto - LSP\back_end\Domain\obj\Debug\net7.0\Domain.csproj.AssemblyReference.cache
-C:\Users\dudul\OneDrive\Área de Trabalho\POO - git\POO\back_end\Domain\bin\Debug\net7.0\Domain.deps.json
-C:\Users\dudul\OneDrive\Área de Trabalho\POO - git\POO\back_end\Domain\bin\Debug\net7.0\Domain.dll
-C:\Users\dudul\OneDrive\Área de Trabalho\POO - git\POO\back_end\Domain\bin\Debug\net7.0\Domain.pdb
-C:\Users\dudul\OneDrive\Área de Trabalho\POO - git\POO\back_end\Domain\obj\Debug\net7.0\Domain.csproj.AssemblyReference.cache
-C:\Users\dudul\OneDrive\Área de Trabalho\POO - git\POO\back_end\Domain\obj\Debug\net7.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\dudul\OneDrive\Área de Trabalho\POO - git\POO\back_end\Domain\obj\Debug\net7.0\Domain.AssemblyInfoInputs.cache
-C:\Users\dudul\OneDrive\Área de Trabalho\POO - git\POO\back_end\Domain\obj\Debug\net7.0\Domain.AssemblyInfo.cs
-C:\Users\dudul\OneDrive\Área de Trabalho\POO - git\POO\back_end\Domain\obj\Debug\net7.0\Domain.csproj.CoreCompileInputs.cache
-C:\Users\dudul\OneDrive\Área de Trabalho\POO - git\POO\back_end\Domain\obj\Debug\net7.0\Domain.dll
-C:\Users\dudul\OneDrive\Área de Trabalho\POO - git\POO\back_end\Domain\obj\Debug\net7.0\refint\Domain.dll
-C:\Users\dudul\OneDrive\Área de Trabalho\POO - git\POO\back_end\Domain\obj\Debug\net7.0\Domain.pdb
-C:\Users\dudul\OneDrive\Área de Trabalho\POO - git\POO\back_end\Domain\obj\Debug\net7.0\ref\Domain.dll
-A:\FACULDADE\Nova pasta\POO\back_end\Domain\bin\Debug\net7.0\Domain.deps.json
-A:\FACULDADE\Nova pasta\POO\back_end\Domain\bin\Debug\net7.0\Domain.dll
-A:\FACULDADE\Nova pasta\POO\back_end\Domain\bin\Debug\net7.0\Domain.pdb
-A:\FACULDADE\Nova pasta\POO\back_end\Domain\obj\Debug\net7.0\Domain.csproj.AssemblyReference.cache
-A:\FACULDADE\Nova pasta\POO\back_end\Domain\obj\Debug\net7.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
-A:\FACULDADE\Nova pasta\POO\back_end\Domain\obj\Debug\net7.0\Domain.AssemblyInfoInputs.cache
-A:\FACULDADE\Nova pasta\POO\back_end\Domain\obj\Debug\net7.0\Domain.AssemblyInfo.cs
-A:\FACULDADE\Nova pasta\POO\back_end\Domain\obj\Debug\net7.0\Domain.csproj.CoreCompileInputs.cache
-A:\FACULDADE\Nova pasta\POO\back_end\Domain\obj\Debug\net7.0\Domain.dll
-A:\FACULDADE\Nova pasta\POO\back_end\Domain\obj\Debug\net7.0\refint\Domain.dll
-A:\FACULDADE\Nova pasta\POO\back_end\Domain\obj\Debug\net7.0\Domain.pdb
-A:\FACULDADE\Nova pasta\POO\back_end\Domain\obj\Debug\net7.0\ref\Domain.dll
+A:\PROJETO\back\Domain\bin\Debug\net7.0\Domain.deps.json
+A:\PROJETO\back\Domain\bin\Debug\net7.0\Domain.dll
+A:\PROJETO\back\Domain\bin\Debug\net7.0\Domain.pdb
+A:\PROJETO\back\Domain\obj\Debug\net7.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+A:\PROJETO\back\Domain\obj\Debug\net7.0\Domain.AssemblyInfoInputs.cache
+A:\PROJETO\back\Domain\obj\Debug\net7.0\Domain.AssemblyInfo.cs
+A:\PROJETO\back\Domain\obj\Debug\net7.0\Domain.csproj.CoreCompileInputs.cache
+A:\PROJETO\back\Domain\obj\Debug\net7.0\Domain.dll
+A:\PROJETO\back\Domain\obj\Debug\net7.0\refint\Domain.dll
+A:\PROJETO\back\Domain\obj\Debug\net7.0\Domain.pdb
+A:\PROJETO\back\Domain\obj\Debug\net7.0\ref\Domain.dll

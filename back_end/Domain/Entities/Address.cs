@@ -10,11 +10,7 @@ namespace Domain.Entities
         public int ZipCode { get; set; }
         public string City { get; set; }
 
-        public IList<User> Users { get; set; }
-        public int UserId { get; set;}
-        public IList<DonationPoint> DonationPoints { get; set; }
-        public int DonationPointId { get; set;}
-        public IList<Institute> Institutes { get; set; }
-        public int InstituteId { get; set; }
+        public List<User> Users { get; set; }
+        public int UserId { get; set; }
     }
 }

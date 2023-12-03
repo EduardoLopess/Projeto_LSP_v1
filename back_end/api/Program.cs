@@ -1,14 +1,9 @@
-using System.ComponentModel;
-using System.Text;
-using api.Configuration;
+using Api.Configuration;
+// using Api.ServicesConfiguration;
 using Data;
 using Data.Repository;
 using Domain.Interfaces;
-using Domain.Services;
-
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,29 +13,37 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddSingleton(builder.Configuration);
+builder.Services.AddCors(options => {
+    options.AddPolicy("AllowAll",
+    builder => {
+        builder.AllowAnyOrigin()
+               .AllowAnyMethod()
+               .AllowAnyHeader();
+    });
+});
+
+// builder.Services.AddTransient<TokenServices>();
 
 
 builder.Services.AddAutoMapper(typeof(AutoMapperConfigDTOs), typeof(AutoMapperConfigViewModels));
 
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IAddressRepository, AddressRepository>();
-builder.Services.AddScoped<IBenefitRepository, BenefitRepository>();
-builder.Services.AddScoped<IResponsabilityRepository, ResponsabilityRepository>();
-builder.Services.AddScoped<IInstituteRepository, InstituteRepository>();
-builder.Services.AddScoped<IDonationMaterialRepository, DonationMaterialRepository>();
 builder.Services.AddScoped<IVolunteeringRepository, VolunteeringRepository>();
-builder.Services.AddScoped<IDonationPointRepository, DonationPointRepository>();
-//builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<ICampaingnDonationRepository, CampaingnDonationRepository>();
 
 
 builder.Services.AddDbContext<DataContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
-// Configure the HTTP request pipeline.
+
+
+
 
 
 var app = builder.Build();
 
+
+// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -49,10 +52,10 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-//app.UseAuthorization();
+app.UseCors("AllowAll");
+
+app.UseAuthorization();
 
 app.MapControllers();
-
-//app.UseAuthentication();
 
 app.Run();

@@ -2,10 +2,10 @@ using AutoMapper;
 using Domain.DTOs;
 using Domain.Entities;
 using Domain.Interfaces;
-using Domain.ViewModels;
+using Domain.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 
-namespace api.Controllers
+namespace Api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
@@ -42,7 +42,7 @@ namespace api.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateAsync(AdressViewModel addressModel, int UserId)
+        public async Task<IActionResult> CreateAsync(AddressViewModel addressModel, int UserId)
         {
             if (!ModelState.IsValid)
             {
@@ -52,7 +52,7 @@ namespace api.Controllers
 
             try
             {
-                await _addressRepository.CreateAsync(address, UserId);
+                await _addressRepository.CreateAsync(address);
                 return Ok("Endereço criado com sucesso");
             }
             catch (Exception ex)
@@ -62,29 +62,8 @@ namespace api.Controllers
         }
 
 
-        [HttpPut("{id}")]
-        public async Task<IActionResult> Update (int id, AdressViewModel model)
-        {
-            if (!ModelState.IsValid) return HttpMessageError("Dados incorretos");
-            var address = _mapper.Map<Address>(model);
-            address.Id = id;
-            await _addressRepository.UpdateAsync(address);
 
-            var addressDTO = _mapper.Map<AddressDTO>(address);
-            return
-                HttpMessageOk(addressDTO);
-        }
 
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete (int id)
-        {
-            var address = await _addressRepository.GetByIdAsync(id);
-            if (address == null) return NotFound();
-
-            await _addressRepository.DeleteAsync(id);
-            return
-                HttpMessageOk($"Address deletado ID: {id}");
-        }
 
 
         private IActionResult HttpMessageOk(dynamic data = null)

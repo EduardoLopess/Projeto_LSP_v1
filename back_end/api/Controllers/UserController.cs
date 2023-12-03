@@ -2,10 +2,10 @@ using AutoMapper;
 using Domain.DTOs;
 using Domain.Entities;
 using Domain.Interfaces;
-using Domain.ViewModels;
+using Domain.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 
-namespace api.Controllers
+namespace Api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
@@ -18,7 +18,6 @@ namespace api.Controllers
             _userRepository = userRepository;
             _mapper = mapper;
         }
-
 
         [HttpGet]
         public async Task<IActionResult> GetAll()
@@ -44,10 +43,21 @@ namespace api.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateAsync([FromBody] UserViewModel createModel)
         {
-            if (!ModelState.IsValid) return HttpMessageError("Dados incorretos");
+            if (!ModelState.IsValid)
+            {
+                var errors = ModelState
+                    .Where(x => x.Value.Errors.Any())
+                    .ToDictionary(
+                        kvp => kvp.Key,
+                        kvp => kvp.Value.Errors.Select(e => e.ErrorMessage).ToList()
+                    );
+
+                return BadRequest(new { Errors = errors });
+            }
+
 
             var user = _mapper.Map<User>(createModel);
-            var address = _mapper.Map<List<Address>>(createModel.AdressViewModels);
+            var address = _mapper.Map<List<Address>>(createModel.AddressViewModels);
 
             user.Addresses = address;
 
@@ -83,15 +93,7 @@ namespace api.Controllers
         }
 
 
-        //EXTRAS
-        // [HttpPost("subscribe")]
-        // public async Task<IActionResult> SubscribeToVolunteering([FromBody] SubscriptionRequestModel subscription)
-        // {
-
-        // }
-
-
-         private IActionResult HttpMessageOk(dynamic data = null)
+        private IActionResult HttpMessageOk(dynamic data = null)
         {
             if (data == null)
                 return NoContent();
@@ -103,5 +105,7 @@ namespace api.Controllers
         {
             return BadRequest(new { message });
         }
+
+
     }
 }

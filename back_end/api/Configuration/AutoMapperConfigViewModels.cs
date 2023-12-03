@@ -1,10 +1,8 @@
 using AutoMapper;
 using Domain.Entities;
-using Domain.Services;
-using Domain.ViewModels;
-using Domain.ViewModels.ServicesViewModels;
+using Domain.ViewModel;
 
-namespace api.Configuration
+namespace Api.Configuration
 {
     public class AutoMapperConfigViewModels : Profile
     {
@@ -17,23 +15,17 @@ namespace api.Configuration
                 .ForMember(dest => dest.BirthdateString, opt => opt.MapFrom(src => src.BirthdateString))                
                 .ForMember(dest => dest.CPF, opt => opt.MapFrom(src => src.CPF))
                 .ForMember(dest => dest.Email, opt => opt.MapFrom(src => src.Email))
-                .ForMember(dest => dest.Addresses, opt => opt.MapFrom(src => src.AdressViewModels));
+                .ForMember(dest => dest.PasswordHash, opt => opt.MapFrom(src => src.PasswordHash))
+                .ForMember(dest => dest.ProfileAcess, opt => opt.MapFrom(src => src.ProfileAcess))
+                .ForMember(dest => dest.Addresses, opt => opt.MapFrom(src => src.AddressViewModels));
 
-            CreateMap<AdressViewModel, Address>();
-             
-            CreateMap<BenefitViewModel, Benefit>();
+            CreateMap<AddressViewModel, Address>();
 
-            CreateMap<ResponsabilityViewModel, Responsibility>();
+            CreateMap<VolunteeringViewModel, Volunteering>()
+                .ForMember(dest => dest.Address, opt => opt.MapFrom(src => src.AddressViewModels));
 
-            CreateMap<InstituteViewModel, Institute>();
-
-            CreateMap<VolunteeringViewModel, Volunteering>();
-            
-            CreateMap<LoginViewModel, Login>();
-
-            CreateMap<DonationMaterialViewModel, DonationMaterial>();
-
-            CreateMap<DonationPointViewModel, DonationPoint>();
+            CreateMap<CampaingnDonationViewModel, CampaingnDonation>()
+                .ForMember(dest => dest.Address, opt => opt.MapFrom(src => src.AddressViewModel));
         }
     }
 }

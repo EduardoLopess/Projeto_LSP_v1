@@ -1,9 +1,9 @@
 using AutoMapper;
 using Domain.DTOs;
 using Domain.Entities;
-using Domain.Services;
+using Domain.Enums;
 
-namespace api.Configuration
+namespace Api.Configuration
 {
     public class AutoMapperConfigDTOs : Profile
     {
@@ -11,42 +11,44 @@ namespace api.Configuration
         {
             CreateMap<User, UserDTO>()
                 .ForMember(dest => dest.FullName, map => map.MapFrom(src => $"{src.Name} {src.Surname}"))
-                .ForMember(dest => dest.AddressesDTO, map => map.MapFrom(src => src.Addresses));
-            
+                .ForMember(dest => dest.AddressDTOs, map => map.MapFrom(src => src.Addresses));
+
             CreateMap<Address, AddressDTO>();
-             
 
             CreateMap<Volunteering, VolunteeringDTO>()
-                .ForMember(dest => dest.BenefitDTOs, map => map.MapFrom(src => src.Benefits))
-                .ForMember(dest => dest.ResposibilityDTOs, map => map.MapFrom(src => src.Responsibility))
-                .ForMember(dest => dest.InstituteDTOs, map => map.MapFrom(src => src.Institute))
-                .ForMember(dest => dest.TypeVolunteering, map => map.MapFrom(src => src.TypeVolunteering));
-
-            CreateMap<Institute, InstituteDTO>()
-                .ForMember(dest => dest.PhoneNumber, map => map.MapFrom(src => src.PhoneNumber))
-                .ForMember(dest => dest.CNPJ, map => map.MapFrom(src => src.CNPJ))
-                .ForMember(dest => dest.InstitutionType, map => map.MapFrom(src => src.InstitutionType))
-                .ForMember(dest => dest.ProfileAcess, map => map.MapFrom(src => src.ProfileAcess))
-                .ForMember(dest => dest.AddressDTO, map => map.MapFrom(src => src.Address))
-                .ForMember(dest => dest.VolunteeringDTOs, map => map.MapFrom(src => src.Volunteerings))
-                .ForMember(dest => dest.DonationMaterialDTOs, map => map.MapFrom(src => src.DonationMaterials));
-
-            CreateMap<Benefit, BenefitDTO>()
-                .ForMember(dest => dest.VolunteeringDTO, map => map.MapFrom(src => src.Volunteering));
-
-            CreateMap<Responsibility, ResponsabilityDTO>();
-            
+                .ForMember(dest => dest.TypeVolunteeringDescription, opt =>
+                    opt.MapFrom(src => src.TypeVolunteering.GetDescription())
+                )
+                .ForMember(dest => dest.AddressDTOs, map => map.MapFrom(src => src.Address))
+                .ForMember(dest => dest.DayStart, opt => opt.MapFrom(src => src.DateStart.Day))
+                .ForMember(dest => dest.MonthStart, opt => opt.MapFrom(src => src.DateStart.Month))
+                .ForMember(dest => dest.YearStart, opt => opt.MapFrom(src => src.DateStart.Year))
+                .ForMember(dest => dest.DayFinish, opt => opt.MapFrom(src => src.DateFinish.Day))
+                .ForMember(dest => dest.MonthFinish, opt => opt.MapFrom(src => src.DateFinish.Month))
+                .ForMember(dest => dest.YearFinish, opt => opt.MapFrom(src => src.DateFinish.Year));
                
+            CreateMap<VolunteeringRegistration, VolunteeringRegistrationDTO>();
 
-            CreateMap<DonationMaterial, DonationMaterialDTO>();
-            
-            CreateMap<Login, LoginDTO>();
-                
-
-            CreateMap<DonationPoint, DonationPointDTO>()
+            CreateMap<CampaingnDonation, CampaingnDonationDTO>()
+                .ForMember(dest => dest.TypeMaterialTypeDescription, opt =>
+                    opt.MapFrom(src => src.MaterialType.GetDescription()))
+                .ForMember(dest => dest.PriorityDonationDescription, opt =>
+                    opt.MapFrom(src => src.PriorityDonation.GetDescription()))
                 .ForMember(dest => dest.AddressDTO, map => map.MapFrom(src => src.Address))
-                .ForMember(dest => dest.DonationMaterialDTOs, map => map.MapFrom(src => src.DonationMaterials));
-         
+                .ForMember(dest => dest.DayStart, opt => opt.MapFrom(src => src.DateStart.Day))
+                .ForMember(dest => dest.MonthStart, opt => opt.MapFrom(src => src.DateStart.Month))
+                .ForMember(dest => dest.YearStart, opt => opt.MapFrom(src => src.DateStart.Year))
+                .ForMember(dest => dest.DayFinish, opt => opt.MapFrom(src => src.DateFinish.Day))
+                .ForMember(dest => dest.MonthFinish, opt => opt.MapFrom(src => src.DateFinish.Month))
+                .ForMember(dest => dest.YearFinish, opt => opt.MapFrom(src => src.DateFinish.Year));
+               
+            
+                
+        
         }
     }
 }
+
+ 
+
+  

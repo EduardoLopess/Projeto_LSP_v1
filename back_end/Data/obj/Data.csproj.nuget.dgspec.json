@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "A:\\FACULDADE\\Nova pasta\\POO\\back_end\\Data\\Data.csproj": {}
+    "A:\\PROJETO\\back\\Data\\Data.csproj": {}
   },
   "projects": {
-    "A:\\FACULDADE\\Nova pasta\\POO\\back_end\\Data\\Data.csproj": {
+    "A:\\PROJETO\\back\\Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "A:\\FACULDADE\\Nova pasta\\POO\\back_end\\Data\\Data.csproj",
+        "projectUniqueName": "A:\\PROJETO\\back\\Data\\Data.csproj",
         "projectName": "Data",
-        "projectPath": "A:\\FACULDADE\\Nova pasta\\POO\\back_end\\Data\\Data.csproj",
+        "projectPath": "A:\\PROJETO\\back\\Data\\Data.csproj",
         "packagesPath": "C:\\Users\\Edu\\.nuget\\packages\\",
-        "outputPath": "A:\\FACULDADE\\Nova pasta\\POO\\back_end\\Data\\obj\\",
+        "outputPath": "A:\\PROJETO\\back\\Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Edu\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "A:\\FACULDADE\\Nova pasta\\POO\\back_end\\Domain\\Domain.csproj": {
-                "projectPath": "A:\\FACULDADE\\Nova pasta\\POO\\back_end\\Domain\\Domain.csproj"
+              "A:\\PROJETO\\back\\Domain\\Domain.csproj": {
+                "projectPath": "A:\\PROJETO\\back\\Domain\\Domain.csproj"
               }
             }
           }
@@ -44,10 +44,6 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
-            "Microsoft.AspNetCore.Authentication.JwtBearer": {
-              "target": "Package",
-              "version": "[7.0.0, )"
-            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.0, )"
@@ -59,10 +55,6 @@
               "version": "[7.0.0, )"
             },
             "Microsoft.EntityFrameworkCore.Sqlite": {
-              "target": "Package",
-              "version": "[7.0.0, )"
-            },
-            "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[7.0.0, )"
             }
@@ -87,14 +79,14 @@
         }
       }
     },
-    "A:\\FACULDADE\\Nova pasta\\POO\\back_end\\Domain\\Domain.csproj": {
+    "A:\\PROJETO\\back\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "A:\\FACULDADE\\Nova pasta\\POO\\back_end\\Domain\\Domain.csproj",
+        "projectUniqueName": "A:\\PROJETO\\back\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "A:\\FACULDADE\\Nova pasta\\POO\\back_end\\Domain\\Domain.csproj",
+        "projectPath": "A:\\PROJETO\\back\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\Edu\\.nuget\\packages\\",
-        "outputPath": "A:\\FACULDADE\\Nova pasta\\POO\\back_end\\Domain\\obj\\",
+        "outputPath": "A:\\PROJETO\\back\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Edu\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -122,20 +114,6 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "dependencies": {
-            "Microsoft.AspNetCore.Authentication.JwtBearer": {
-              "target": "Package",
-              "version": "[7.0.0, )"
-            },
-            "Microsoft.Extensions.Configuration": {
-              "target": "Package",
-              "version": "[7.0.0, )"
-            },
-            "SmartFormat.Extensions.Newtonsoft.Json": {
-              "target": "Package",
-              "version": "[3.3.0, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",

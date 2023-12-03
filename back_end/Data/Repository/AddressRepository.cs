@@ -11,14 +11,13 @@ namespace Data.Repository
         {
             _context = context;
         }
-
-        public async Task CreateAsync(Address entity, int userId)
+        public async Task CreateAsync(Address entity)
         {
-            entity.UserId = userId;
             _context.Addresses.Add(entity);
             await
                 _context.SaveChangesAsync();
         }
+
         public async Task<IList<Address>> GetAllAsync()
         {
             return
@@ -37,7 +36,7 @@ namespace Data.Repository
 
         public async Task UpdateAsync(Address entity)
         {
-           var existingAddress = await _context.Addresses
+            var existingAddress = await _context.Addresses
                                 .Include(u => u.Users)
                                 .FirstOrDefaultAsync(u => u.Id == entity.Id);
             if(existingAddress != null)
@@ -47,7 +46,7 @@ namespace Data.Repository
                     _context.SaveChangesAsync();
             }                    
         }
-
+        
         public async Task DeleteAsync(int entityId)
         {
             var existingAddress = await _context.Addresses

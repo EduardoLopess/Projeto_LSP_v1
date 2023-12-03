@@ -1,51 +1,17 @@
-C:\Users\Edu\Desktop\Projeto - LSP\back_end\Data\bin\Debug\net7.0\Data.deps.json
-C:\Users\Edu\Desktop\Projeto - LSP\back_end\Data\bin\Debug\net7.0\Data.runtimeconfig.json
-C:\Users\Edu\Desktop\Projeto - LSP\back_end\Data\bin\Debug\net7.0\Data.dll
-C:\Users\Edu\Desktop\Projeto - LSP\back_end\Data\bin\Debug\net7.0\Data.pdb
-C:\Users\Edu\Desktop\Projeto - LSP\back_end\Data\bin\Debug\net7.0\Domain.dll
-C:\Users\Edu\Desktop\Projeto - LSP\back_end\Data\bin\Debug\net7.0\Domain.pdb
-C:\Users\Edu\Desktop\Projeto - LSP\back_end\Data\obj\Debug\net7.0\Data.csproj.AssemblyReference.cache
-C:\Users\Edu\Desktop\Projeto - LSP\back_end\Data\obj\Debug\net7.0\Data.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Edu\Desktop\Projeto - LSP\back_end\Data\obj\Debug\net7.0\Data.AssemblyInfoInputs.cache
-C:\Users\Edu\Desktop\Projeto - LSP\back_end\Data\obj\Debug\net7.0\Data.AssemblyInfo.cs
-C:\Users\Edu\Desktop\Projeto - LSP\back_end\Data\obj\Debug\net7.0\Data.csproj.CoreCompileInputs.cache
-C:\Users\Edu\Desktop\Projeto - LSP\back_end\Data\obj\Debug\net7.0\Data.csproj.CopyComplete
-C:\Users\Edu\Desktop\Projeto - LSP\back_end\Data\obj\Debug\net7.0\Data.dll
-C:\Users\Edu\Desktop\Projeto - LSP\back_end\Data\obj\Debug\net7.0\refint\Data.dll
-C:\Users\Edu\Desktop\Projeto - LSP\back_end\Data\obj\Debug\net7.0\Data.pdb
-C:\Users\Edu\Desktop\Projeto - LSP\back_end\Data\obj\Debug\net7.0\Data.genruntimeconfig.cache
-C:\Users\Edu\Desktop\Projeto - LSP\back_end\Data\obj\Debug\net7.0\ref\Data.dll
-C:\Users\dudul\OneDrive\Área de Trabalho\POO - git\POO\back_end\Data\bin\Debug\net7.0\Data.deps.json
-C:\Users\dudul\OneDrive\Área de Trabalho\POO - git\POO\back_end\Data\bin\Debug\net7.0\Data.runtimeconfig.json
-C:\Users\dudul\OneDrive\Área de Trabalho\POO - git\POO\back_end\Data\bin\Debug\net7.0\Data.dll
-C:\Users\dudul\OneDrive\Área de Trabalho\POO - git\POO\back_end\Data\bin\Debug\net7.0\Data.pdb
-C:\Users\dudul\OneDrive\Área de Trabalho\POO - git\POO\back_end\Data\bin\Debug\net7.0\Domain.dll
-C:\Users\dudul\OneDrive\Área de Trabalho\POO - git\POO\back_end\Data\bin\Debug\net7.0\Domain.pdb
-C:\Users\dudul\OneDrive\Área de Trabalho\POO - git\POO\back_end\Data\obj\Debug\net7.0\Data.csproj.AssemblyReference.cache
-C:\Users\dudul\OneDrive\Área de Trabalho\POO - git\POO\back_end\Data\obj\Debug\net7.0\Data.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\dudul\OneDrive\Área de Trabalho\POO - git\POO\back_end\Data\obj\Debug\net7.0\Data.AssemblyInfoInputs.cache
-C:\Users\dudul\OneDrive\Área de Trabalho\POO - git\POO\back_end\Data\obj\Debug\net7.0\Data.AssemblyInfo.cs
-C:\Users\dudul\OneDrive\Área de Trabalho\POO - git\POO\back_end\Data\obj\Debug\net7.0\Data.csproj.CoreCompileInputs.cache
-C:\Users\dudul\OneDrive\Área de Trabalho\POO - git\POO\back_end\Data\obj\Debug\net7.0\Data.csproj.CopyComplete
-C:\Users\dudul\OneDrive\Área de Trabalho\POO - git\POO\back_end\Data\obj\Debug\net7.0\Data.dll
-C:\Users\dudul\OneDrive\Área de Trabalho\POO - git\POO\back_end\Data\obj\Debug\net7.0\refint\Data.dll
-C:\Users\dudul\OneDrive\Área de Trabalho\POO - git\POO\back_end\Data\obj\Debug\net7.0\Data.pdb
-C:\Users\dudul\OneDrive\Área de Trabalho\POO - git\POO\back_end\Data\obj\Debug\net7.0\Data.genruntimeconfig.cache
-C:\Users\dudul\OneDrive\Área de Trabalho\POO - git\POO\back_end\Data\obj\Debug\net7.0\ref\Data.dll
-A:\FACULDADE\Nova pasta\POO\back_end\Data\bin\Debug\net7.0\Data.deps.json
-A:\FACULDADE\Nova pasta\POO\back_end\Data\bin\Debug\net7.0\Data.runtimeconfig.json
-A:\FACULDADE\Nova pasta\POO\back_end\Data\bin\Debug\net7.0\Data.dll
-A:\FACULDADE\Nova pasta\POO\back_end\Data\bin\Debug\net7.0\Data.pdb
-A:\FACULDADE\Nova pasta\POO\back_end\Data\bin\Debug\net7.0\Domain.dll
-A:\FACULDADE\Nova pasta\POO\back_end\Data\bin\Debug\net7.0\Domain.pdb
-A:\FACULDADE\Nova pasta\POO\back_end\Data\obj\Debug\net7.0\Data.csproj.AssemblyReference.cache
-A:\FACULDADE\Nova pasta\POO\back_end\Data\obj\Debug\net7.0\Data.GeneratedMSBuildEditorConfig.editorconfig
-A:\FACULDADE\Nova pasta\POO\back_end\Data\obj\Debug\net7.0\Data.AssemblyInfoInputs.cache
-A:\FACULDADE\Nova pasta\POO\back_end\Data\obj\Debug\net7.0\Data.AssemblyInfo.cs
-A:\FACULDADE\Nova pasta\POO\back_end\Data\obj\Debug\net7.0\Data.csproj.CoreCompileInputs.cache
-A:\FACULDADE\Nova pasta\POO\back_end\Data\obj\Debug\net7.0\Data.csproj.CopyComplete
-A:\FACULDADE\Nova pasta\POO\back_end\Data\obj\Debug\net7.0\Data.dll
-A:\FACULDADE\Nova pasta\POO\back_end\Data\obj\Debug\net7.0\refint\Data.dll
-A:\FACULDADE\Nova pasta\POO\back_end\Data\obj\Debug\net7.0\Data.pdb
-A:\FACULDADE\Nova pasta\POO\back_end\Data\obj\Debug\net7.0\Data.genruntimeconfig.cache
-A:\FACULDADE\Nova pasta\POO\back_end\Data\obj\Debug\net7.0\ref\Data.dll
+A:\PROJETO\back\Data\bin\Debug\net7.0\Data.deps.json
+A:\PROJETO\back\Data\bin\Debug\net7.0\Data.runtimeconfig.json
+A:\PROJETO\back\Data\bin\Debug\net7.0\Data.dll
+A:\PROJETO\back\Data\bin\Debug\net7.0\Data.pdb
+A:\PROJETO\back\Data\bin\Debug\net7.0\Domain.dll
+A:\PROJETO\back\Data\bin\Debug\net7.0\Domain.pdb
+A:\PROJETO\back\Data\obj\Debug\net7.0\Data.csproj.AssemblyReference.cache
+A:\PROJETO\back\Data\obj\Debug\net7.0\Data.GeneratedMSBuildEditorConfig.editorconfig
+A:\PROJETO\back\Data\obj\Debug\net7.0\Data.AssemblyInfoInputs.cache
+A:\PROJETO\back\Data\obj\Debug\net7.0\Data.AssemblyInfo.cs
+A:\PROJETO\back\Data\obj\Debug\net7.0\Data.csproj.CoreCompileInputs.cache
+A:\PROJETO\back\Data\obj\Debug\net7.0\Data.csproj.CopyComplete
+A:\PROJETO\back\Data\obj\Debug\net7.0\Data.dll
+A:\PROJETO\back\Data\obj\Debug\net7.0\refint\Data.dll
+A:\PROJETO\back\Data\obj\Debug\net7.0\Data.pdb
+A:\PROJETO\back\Data\obj\Debug\net7.0\Data.genruntimeconfig.cache
+A:\PROJETO\back\Data\obj\Debug\net7.0\ref\Data.dll

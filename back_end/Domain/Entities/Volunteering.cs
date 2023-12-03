@@ -1,4 +1,3 @@
-using System.Net.NetworkInformation;
 using Domain.Enums;
 
 namespace Domain.Entities
@@ -8,15 +7,15 @@ namespace Domain.Entities
         public int Id { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
-        public DateTime CreatedAt { get; set; } // Data de criação do voluntariado
-        public TimeSpan Duration { get; set; } // Duraçao
-  
-        public IList<Benefit> Benefits { get; set; }
-        public IList<Responsibility> Responsibility { get; set; } // List Responsability
-        public IList<User> UsersParticipants { get; set; } // User subscriber
-        public TypeVolunteering TypeVolunteering { get; set; } 
+        public string About { get; set; }
+        public TypeVolunteering TypeVolunteering { get; set; }
+        public string Contact { get; set; }
+        public DateTime DateStart { get; set; }
+        public DateTime DateFinish { get; set; }
+        public List<string> Responsibilities { get; set; }
+        public List<string> Benefits { get; set; }
 
-        public Institute Institute { get; set; } // Institute belonged
-
+        public int UserId { get; set; }
+        public Address Address { get; set; }
     }
- }
+}

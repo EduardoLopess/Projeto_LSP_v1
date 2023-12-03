@@ -4,6 +4,6 @@ namespace Domain.Interfaces
 {
     public interface IAddressRepository : IBaseRepository<Address>
     {
-        Task CreateAsync(Address entity, int userId);
+        Task CreateAsync(Address entity);
     }
 }

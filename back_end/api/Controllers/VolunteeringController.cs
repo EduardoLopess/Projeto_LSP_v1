@@ -1,11 +1,13 @@
 using AutoMapper;
+using Data.Repository;
 using Domain.DTOs;
 using Domain.Entities;
+using Domain.Enums;
 using Domain.Interfaces;
-using Domain.ViewModels;
+using Domain.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 
-namespace api.Controllers
+namespace Api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
@@ -24,7 +26,11 @@ namespace api.Controllers
         {
             var volunteering = await _volunteeringRepository.GetAllAsync();
             var volunteeringDTO = _mapper.Map<IList<VolunteeringDTO>>(volunteering);
-
+            foreach (var item in volunteeringDTO)
+            {
+                item.TypeVolunteeringDescription = item.TypeVolunteering
+                    .GetDescription();
+            }
             return
                 HttpMessageOk(volunteeringDTO);
 
@@ -37,6 +43,9 @@ namespace api.Controllers
             if (volunteering == null) return NotFound();
 
             var volunteeringDTO = _mapper.Map<VolunteeringDTO>(volunteering);
+            volunteeringDTO.TypeVolunteeringDescription = volunteeringDTO
+                .TypeVolunteering.GetDescription();
+
             return
                 HttpMessageOk(volunteeringDTO);
         }
@@ -47,17 +56,19 @@ namespace api.Controllers
             if (!ModelState.IsValid) return HttpMessageError("Dados incorretos");
 
             var volunteering = _mapper.Map<Volunteering>(createModel);
-            var benefits = _mapper.Map<IList<Benefit>>(createModel.BenefitViewModels);
-            var responsibilities = _mapper.Map<IList<Responsibility>>(createModel.ResponsabilityViewModels);
 
-            volunteering.Benefits = benefits;
-            volunteering.Responsibility = responsibilities;
-            await _volunteeringRepository.CreateAsync(volunteering, responsibilities, benefits);
+            volunteering.Address = _mapper.Map<Address>(createModel.AddressViewModels);
+
+            volunteering.Responsibilities = createModel.Responsibilities;
+            volunteering.Benefits = createModel.Benefits;
+
+            // Ajuste o método CreateAsync para aceitar um único endereço
+            await _volunteeringRepository.CreateAsync(volunteering, createModel.Responsibilities, createModel.Benefits, _mapper.Map<Address>(createModel.AddressViewModels));
 
             var volunteeringDTO = _mapper.Map<VolunteeringDTO>(volunteering);
-            return
-                HttpMessageOk(volunteeringDTO);
+            return HttpMessageOk(volunteeringDTO);
         }
+
 
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, VolunteeringViewModel model)
@@ -85,26 +96,6 @@ namespace api.Controllers
         }
 
 
-
-        // [HttpGet("volunteerings/summaries")]
-        // public async Task<IActionResult> GetVolunteeringsSummaries()
-        // {
-        //     var volunteeringsSummaries = await _volunteeringRepository.GetSummaries(); // Método fictício para buscar informações resumidas
-
-        //     // Mapear para um modelo resumido ou DTO se necessário
-        //     var summaries = volunteeringsSummaries.Select(v => new
-        //     {
-        //         v.Id,
-        //         v.Title,
-        //         v.Description,
-        //         v.Type,
-        //         // Outras propriedades relevantes para os cards
-        //     });
-
-        //     return Ok(summaries);
-        // }
-
-
         private IActionResult HttpMessageOk(dynamic data = null)
         {
             if (data == null)
@@ -117,5 +108,7 @@ namespace api.Controllers
         {
             return BadRequest(new { message });
         }
+
+
     }
 }

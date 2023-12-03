@@ -11,51 +11,34 @@ namespace Data.Repository
         {
             _context = context;
         }
-
-        public async Task CreateAsync(Volunteering entity, IList<Responsibility> responsibilities, IList<Benefit> benefits)
+        public async Task CreateAsync(Volunteering entity, List<string> responsibilities, List<string> benefits, Address address)
         {
-            entity.Responsibility = responsibilities;
+            entity.Responsibilities = responsibilities;
             entity.Benefits = benefits;
-
+            entity.Address = address;
+            
             _context.Add(entity);
 
-            // Adicione as responsabilidades e benefícios individualmente ao contexto
-            foreach (var responsibility in responsibilities)
-            {
-                _context.Add(responsibility);
-            }
-
-            foreach (var benefit in benefits)
-            {
-                _context.Add(benefit);
-            }
-
-            await _context.SaveChangesAsync();
+            await _context.SaveChangesAsync(); 
         }
-
         public async Task<IList<Volunteering>> GetAllAsync()
         {
             return
                 await _context.Volunteerings
-                    .Include(b => b.Benefits)
-                    .Include(r => r.Responsibility)
-                    .ToListAsync();
+                .Include(a => a.Address)
+                .ToListAsync();
         }
 
         public async Task<Volunteering> GetByIdAsync(int entityId)
         {
-            return
-                await _context.Volunteerings
-                    .Include(b => b.Benefits)
-                    .Include(r => r.Responsibility)
-                    .SingleOrDefaultAsync(v => v.Id == entityId);
+            return await _context.Volunteerings
+                .Include(a => a.Address)
+                .SingleOrDefaultAsync(v => v.Id == entityId);
         }
-
         public async Task UpdateAsync(Volunteering entity)
         {
             var existeVolunteering = await _context.Volunteerings
-                                    .Include(b => b.Benefits)
-                                    .Include(r => r.Responsibility)
+                                    .Include(a => a.Address)
                                     .FirstOrDefaultAsync(a => a.Id == entity.Id);
             if(existeVolunteering != null)
             {
@@ -67,9 +50,8 @@ namespace Data.Repository
 
         public async Task DeleteAsync(int entityId)
         {
-            var existeVolunteering = await _context.Volunteerings
-                                    .Include(b => b.Benefits)
-                                    .Include(r => r.Responsibility)
+             var existeVolunteering = await _context.Volunteerings
+                                    .Include(a => a.Address)
                                     .FirstOrDefaultAsync(a => a.Id == entityId);
 
             if(existeVolunteering != null)
@@ -80,14 +62,16 @@ namespace Data.Repository
             }                         
         }
 
-        public Task SubscribeVolunteering(Volunteering entity, User users)
+        public async Task SingUpForVolunteering(int userId, int volunteeringId)
         {
-            throw new NotImplementedException();
-        }
-
-        public Task<IList<User>> GetUsersForVolunteeringAsync(Volunteering volunteering)
-        {
-            throw new NotImplementedException();
+            var volunteeringRegistration = new VolunteeringRegistration
+            {
+                UserId = userId,
+                VolunteeringId = volunteeringId,
+                RegistrationDate = DateTime.UtcNow
+            };
+            _context.VolunteeringRegistrations.Add(volunteeringRegistration);
+            await _context.SaveChangesAsync();
         }
 
     }

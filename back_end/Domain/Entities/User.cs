@@ -1,5 +1,4 @@
 using Domain.Enums;
-using Domain.Services;
 
 namespace Domain.Entities
 {
@@ -12,11 +11,6 @@ namespace Domain.Entities
         public string CPF { get; set; }
         public Gender Gender { get; set; }
         public string BirthdateString { get; set; }
-
-
         public IList<Address> Addresses { get; set; }
-        public IList<Volunteering> VolunteeringsSubscriber { get; set; }
-        public Login Login { get; set; }
-     
     }
 }
