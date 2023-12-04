@@ -29,7 +29,7 @@ namespace Api.Configuration
                
             CreateMap<VolunteeringRegistration, VolunteeringRegistrationDTO>();
 
-            CreateMap<CampaingnDonation, CampaingnDonationDTO>()
+           CreateMap<CampaingnDonation, CampaingnDonationDTO>()
                 .ForMember(dest => dest.TypeMaterialTypeDescription, opt =>
                     opt.MapFrom(src => src.MaterialType.GetDescription()))
                 .ForMember(dest => dest.PriorityDonationDescription, opt =>
@@ -41,7 +41,9 @@ namespace Api.Configuration
                 .ForMember(dest => dest.DayFinish, opt => opt.MapFrom(src => src.DateFinish.Day))
                 .ForMember(dest => dest.MonthFinish, opt => opt.MapFrom(src => src.DateFinish.Month))
                 .ForMember(dest => dest.YearFinish, opt => opt.MapFrom(src => src.DateFinish.Year));
-               
+
+
+                    
             
                 
         

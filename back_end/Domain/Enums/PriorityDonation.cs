@@ -6,7 +6,7 @@ namespace Domain.Enums
     {
         [Description("Baixa")]
         lower = 1,
-        [Description("Média ")]
+        [Description("Média")]
         medium = 2,
         [Description("Alta")]
         high = 3

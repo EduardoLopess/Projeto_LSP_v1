@@ -17,10 +17,7 @@ namespace Domain.Enums
         [Description("Produtos de saúde e higiene")]
         HealthAndHygieneProducts, // Produtos de saúde e higiene
         [Description("Ferramentas")]
-        Tools, // Ferramentas
-        [Description("Artes e artesanato")]
-        ArtsAndCrafts, // Artes e artesanato
-        [Description("Jogos e entretenimento")]
+
         GamesAndEntertainment, // Jogos e entretenimento
         [Description("Instrumentos musicais")]
         MusicalInstruments, // Instrumentos musicais
